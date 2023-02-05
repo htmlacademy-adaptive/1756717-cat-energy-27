@@ -1,0 +1,30 @@
+@use "../global/variable.scss" as var;
+
+.about__title {
+  margin: 0 0 40px 0;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 32px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about__description {
+  font-family: var.$secondary-font;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

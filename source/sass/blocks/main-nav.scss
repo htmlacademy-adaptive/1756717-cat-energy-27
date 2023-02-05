@@ -1,0 +1,39 @@
+@use "../global/variable.scss" as var;
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__link {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var.$black;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--current {
+    pointer-events: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: var.$white;
+  }
+}

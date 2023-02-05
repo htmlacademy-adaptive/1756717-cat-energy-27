@@ -1,0 +1,32 @@
+@use "../global/variable.scss" as var;
+
+.form__title {
+  margin: 0 0 37px 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 54px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 56px 0;
+  }
+}
+
+.form__subtitle {
+  margin: 0 0 39px 0;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 66px 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

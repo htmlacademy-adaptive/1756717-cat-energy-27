@@ -1,0 +1,35 @@
+@use "../global/variable.scss" as var;
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item-title {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var.$deep-grey;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 23px 0;
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+.catalog__item-lead {
+  margin: 0 0 21px 0;
+  font-family: var.$secondary-font;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 87px 0;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

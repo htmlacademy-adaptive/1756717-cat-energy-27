@@ -1,0 +1,28 @@
+@use "../global/variable.scss" as var;
+
+.contacts__title {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  color: var.$deep-grey;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__address {
+  font-family: var.$secondary-font;
+  font-style: normal;
+  line-height: 20px;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.contacts__map-frame {
+  border: none;
+}

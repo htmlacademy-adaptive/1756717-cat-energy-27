@@ -1,0 +1,54 @@
+@use "../global/variable.scss" as var;
+
+.catalog-additional__title {
+  margin: 0 0 36px 0;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 80px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.catalog-additional__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-additional__item-title {
+  margin: 0 0 13px 0;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var.$special-dark-grey;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.catalog-additional__text {
+  margin: 0;
+  font-family: var.$secondary-font;
+  line-height: 14px;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.catalog-additional__promo-text {
+  font-family: var.$secondary-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: var.$white;
+}
