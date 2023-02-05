@@ -5,14 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи - главная страница</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
   <header class="main-header">
-    <span class="main-header__logo">
+    <a class="main-header__logo" href="index.html">
       <img class="main-header__logo-img" width="33" height="38" src="img/logo-mobile.svg" alt="Логотип Cat Energy.">
       <img class="main-header__logo-text" width="101" height="18" src="img/logo-text.svg" alt="">
-    </span>
+    </a>
     <nav class="main-header__nav main-nav">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -90,7 +91,10 @@
             <dd class="example__item-value">60 дней</dd>
           </div>
         </dl>
-        <p class="example__summary">Затраты на питание: 15 000 руб.</p>
+        <p class="example__summary">
+          <span>Затраты на питание:</span>
+          <span>15 000 руб.</span>
+        </p>
       </div>
       <div class="example__slider">
         <img class="example__img example__img--before" width="280" height="256" src="img/cat-before-mobile@1x.png"
@@ -106,7 +110,10 @@
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__wrapper">
         <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <address class="contacts__address">
+          <span>ул. Большая Конюшенная д. 19/8</span>
+          <span>Санкт-Петербург</span>
+        </address>
       </div>
       <div class="contacts__map">
         <iframe class="contacts__map-frame"
@@ -121,9 +128,9 @@
     </section>
   </main>
   <footer class="main-footer">
-    <span class="main-footer__logo">
+    <a class="main-footer__logo" href="index.html">
       <img class="main-footer__logo-img" width="128" height="24" src="img/logo-text.svg" alt="Логотип Cat Energy.">
-    </span>
+    </a>
     <ul class="main-footer__social social">
       <li class="social__item">
         <a class="social__link" href="#">

@@ -1,0 +1,77 @@
+@use "../global/variable.scss" as var;
+
+.selection-form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.selection-form__title {
+  display: block;
+  margin: 0 0 34px 0;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var.$black;
+
+  &--small-indent {
+    @media (min-width: var.$tablet-width) {
+      margin: 0 0 57px 0;
+    }
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 76px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.selection-form__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.selection-form__label {
+  font-size: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.selection-form__control-description {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var.$special-dark-grey;
+
+  &--accent {
+    color: var.$black;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.selection-form__button {
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.selection-form__comment {
+  margin: 0;
+  font-family: var.$secondary-font;
+  line-height: 16px;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 16px;
+  }
+}
