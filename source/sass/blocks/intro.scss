@@ -1,0 +1,44 @@
+@use "../global/variable.scss" as var;
+
+.intro__title {
+  margin: 0 0 25px 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: var.$white;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 40px 0;
+    font-size: 60px;
+    line-height: 60px;
+    color: var.$black;
+  }
+}
+
+.intro__subtitle {
+  margin: 0 0 29px 0;
+  line-height: 14px;
+  color: var.$white;
+  text-transform: uppercase;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 49px 0;
+    font-size: 20px;
+    line-height: 20px;
+    color: var.$black;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 52px 0;
+  }
+}
+
+.intro__button {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,59 @@
+@use "../global/variable.scss" as var;
+
+.reason__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reason__item-title {
+  margin: 0 0 29px 0;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var.$black;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 24px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 73px 0;
+  }
+}
+
+.reason__item-description {
+  margin: 0 0 23px 0;
+  font-family: var.$secondary-font;
+
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 48px 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: var.$black;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 23px 0;
+  }
+}
+
+.reason__link {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var.$black;
+  transition: 0.3s ease;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

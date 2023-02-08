@@ -1,0 +1,87 @@
+@use "../global/variable.scss" as var;
+
+.main-nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 18px 20px;
+}
+
+.main-nav__list {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: var.$white;
+
+  @media (min-width: var.$tablet-width) {
+    position: relative;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid var.$light;
+
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  padding: 22px 20px 24px 20px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var.$black;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--current {
+    pointer-events: none;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: var.$white;
+  }
+}
+
+.main-nav__toggle {
+  @media (min-width: var.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--nojs {
+  .main-nav__toggle {
+    @media (max-width: var.$mobile-width-only) {
+      display: none;
+    }
+  }
+}
+
+.main-nav--opened {
+  .main-nav__item {
+    @media (max-width: var.$mobile-width-only) {
+      display: block;
+    }
+  }
+}
