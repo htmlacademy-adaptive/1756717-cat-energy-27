@@ -9,6 +9,7 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease;
 
   &--primary {
     color: var.$white;
