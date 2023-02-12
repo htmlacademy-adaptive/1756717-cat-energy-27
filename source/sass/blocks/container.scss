@@ -1,5 +1,12 @@
+@use "../global//variable.scss" as var;
+
 .container {
   width: 100%;
-  max-width: 1260px;
+  max-width: 1280px;
   padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 30px;
+  }
 }

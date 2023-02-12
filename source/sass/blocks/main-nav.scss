@@ -4,7 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px 18px 20px;
+
+  @media (max-width: var.$mobile-width-only) {
+    padding-bottom: 18px;
+  }
 }
 
 .main-nav__list {
@@ -15,16 +18,37 @@
   list-style: none;
   background-color: var.$white;
 
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
   @media (min-width: var.$tablet-width) {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 18px;
   }
 }
 
 .main-nav__item {
-  border-top: 1px solid var.$light;
-
   @media (max-width: var.$mobile-width-only) {
-    display: none;
+    border-top: 1px solid var.$light;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    margin-right: 33px;
+  }
+}
+
+.main-nav__item:nth-child(3n) {
+  @media (min-width: var.$tablet-width) {
+    margin-right: 0;
   }
 }
 
@@ -51,7 +75,14 @@
     pointer-events: none;
   }
 
+  &--contrast {
+    @media (min-width: var.$desktop-width) {
+      color: var.$white;
+    }
+  }
+
   @media (min-width: var.$tablet-width) {
+    padding: 5px 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -60,13 +91,45 @@
   @media (min-width: var.$desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: var.$white;
   }
 }
 
 .main-nav__toggle {
+  position: relative;
+  width: 24px;
+  height: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
   @media (min-width: var.$tablet-width) {
     display: none;
+  }
+}
+
+.main-nav__toggle-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background-color: var.$black;
+  transition: 0.3s ease;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 8px;
+  }
+
+  &:nth-child(3) {
+    top: 8px;
+  }
+
+  &:nth-child(4) {
+    top: 16px;
   }
 }
 
@@ -79,9 +142,29 @@
 }
 
 .main-nav--opened {
-  .main-nav__item {
+  .main-nav__list {
     @media (max-width: var.$mobile-width-only) {
       display: block;
+    }
+  }
+
+  .main-nav__toggle-line {
+    &:nth-child(1) {
+      transform: scaleX(0);
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+      height: 1px;
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      height: 1px;
+    }
+
+    &:nth-child(4) {
+      transform: scaleX(0);
     }
   }
 }
