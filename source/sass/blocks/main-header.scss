@@ -1,5 +1,24 @@
 @use "../global/variable.scss" as var;
 
+.main-header__nav {
+  padding: 10px 20px 18px 20px;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 75px;
+    padding: 0 30px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 1280px;
+    margin: 0 auto 61px auto;
+    padding: 50px 30px;
+  }
+}
+
+
 .main-header__logo {
   &:hover {
     opacity: 0.8;
@@ -7,5 +26,10 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    width: 174px;
+    height: 58px;
   }
 }
