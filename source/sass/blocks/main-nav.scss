@@ -27,24 +27,19 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
+    gap: 10px 34px;
     max-width: 500px;
     background-color: var.$transparent;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: 50%;
   }
 }
 
 .main-nav__item {
   @media (max-width: var.$mobile-width-only) {
     border-top: 1px solid var.$light;
-  }
-
-  @media (min-width: var.$tablet-width) {
-    margin-right: 33px;
-  }
-}
-
-.main-nav__item:nth-child(3n) {
-  @media (min-width: var.$tablet-width) {
-    margin-right: 0;
   }
 }
 
@@ -108,7 +103,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  height: 1.5px;
+  height: 2px;
   background-color: var.$black;
   transition: 0.3s ease;
 
@@ -151,12 +146,10 @@
 
     &:nth-child(2) {
       transform: rotate(45deg);
-      height: 1px;
     }
 
     &:nth-child(3) {
       transform: rotate(-45deg);
-      height: 1px;
     }
 
     &:nth-child(4) {

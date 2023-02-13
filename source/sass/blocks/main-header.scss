@@ -1,25 +1,26 @@
 @use "../global/variable.scss" as var;
 
 .main-header__nav {
-  padding: 10px 20px 18px 20px;
+  padding: 10px 0 18px 0;
 
   @media (min-width: var.$tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 75px;
-    padding: 0 30px;
+    padding: 0;
   }
 
   @media (min-width: var.$desktop-width) {
     max-width: 1280px;
-    margin: 0 auto 61px auto;
-    padding: 50px 30px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
   }
 }
 
 
 .main-header__logo {
+  display: flex;
+
   &:hover {
     opacity: 0.8;
   }

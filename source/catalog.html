@@ -10,32 +10,34 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-header__nav main-nav main-nav--no-js">
-      <div class="main-nav__wrapper">
-        <a class="main-header__logo" href="index.html">
-          <img class="main-header__logo-img" width="191" height="38" src="img/logo-mobile.svg"
-            alt="Логотип Cat Energy.">
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="main-nav__toggle-line"></span>
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--current">Каталог продукции</a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="container">
+      <nav class="main-header__nav main-nav main-nav--no-js">
+        <div class="main-nav__wrapper">
+          <a class="main-header__logo" href="index.html">
+            <img class="main-header__logo-img" width="191" height="38" src="img/logo-mobile.svg"
+              alt="Логотип Cat Energy.">
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--current">Каталог продукции</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-body__main">
     <h1 class="page-body__main-header">Каталог продукции</h1>
@@ -273,9 +275,11 @@
     </section>
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
-      <div class="contacts__wrapper container">
+      <div class="contacts__wrapper">
+        <div class="container">
         <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        </div>
       </div>
       <div class="contacts__map">
         <iframe class="contacts__map-frame"

@@ -2,11 +2,11 @@
 
 .intro {
   @media (min-width: var.$tablet-width) {
-    padding: 0 0 609px 118px;
+    padding: 62px 0 526px 88px;
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 0 0 110px;
+    padding: 0;
   }
 }
 
@@ -51,6 +51,8 @@
 
   @media (min-width: var.$tablet-width) {
     background-image: none;
+    width: 0;
+    height: 0;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -58,6 +60,7 @@
     right: 0;
     left: 50%;
     width: 50%;
+    height: 100%;
     min-height: 694px;
     background-image: url("../img/intro-background-desktop@1x.png");
 
@@ -67,9 +70,21 @@
   }
 }
 
+.intro__text-wrapper {
+  padding: 27px 0 29px 0;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 111px 0 0 80px;
+  }
+}
+
 
 .intro__title {
-  margin: 27px 20px 25px 20px;
+  margin: 0 0 25px 0;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -87,13 +102,14 @@
 }
 
 .intro__subtitle {
-  margin: 0 20px 29px 20px;
+  margin: 0;
   line-height: 14px;
   color: var.$white;
   text-transform: uppercase;
   text-align: center;
 
   @media (min-width: var.$tablet-width) {
+    max-width: 300px;
     margin: 0 0 49px 0;
     font-size: 20px;
     line-height: 20px;
@@ -112,25 +128,28 @@
 
   @media (min-width: var.$tablet-width) {
     position: absolute;
-    top: 341px;
-    left: 20px;
+    top: 317px;
+    left: 50%;
     width: 709px;
     height: 609px;
     z-index: -1;
+    transform: translateX(-50%);
   }
 
   @media (min-width: var.$desktop-width) {
     top: 141px;
-    left: 478px;
+    right: 330px;
+    left: calc(100% - 330px - 552px);
     width: 552px;
     height: 499px;
     z-index: 2;
+    transform: translateX(0);
   }
 }
 
 .intro__button {
   width: auto;
-  margin: 0 20px 20px 20px;
+  margin: 0 0 20px 0;
   font-size: 14px;
   line-height: 18px;
 
@@ -142,6 +161,6 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 0 0 267px 0;
+    margin: 0 0 267px 80px;
   }
 }
