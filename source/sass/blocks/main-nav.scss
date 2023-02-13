@@ -4,10 +4,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: var.$mobile-width-only) {
-    padding-bottom: 18px;
-  }
 }
 
 .main-nav__list {
@@ -32,7 +28,7 @@
     justify-content: flex-end;
     align-items: center;
     max-width: 500px;
-    margin-top: 18px;
+    background-color: var.$transparent;
   }
 }
 
