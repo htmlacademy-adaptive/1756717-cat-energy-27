@@ -118,39 +118,59 @@
     </section>
     <section class="example">
       <div class="container">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по
-          16
-          часов в день.</p>
         <div class="example__wrapper">
-          <dl class="example__list">
-            <div class="example__item">
-              <dt class="example__item-indicator">снижение веса</dt>
-              <dd class="example__item-value">5 кг</dd>
+          <div class="example__wrapper-text">
+            <h2 class="example__title">Живой пример</h2>
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
+              Energy
+              Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
+              по
+              16
+              часов в день.</p>
+            <div class="example__list-wrapper">
+              <dl class="example__list">
+                <div class="example__item">
+                  <dt class="example__item-indicator">снижение веса</dt>
+                  <dd class="example__item-value">5 кг</dd>
+                </div>
+                <div class="example__item">
+                  <dt class="example__item-indicator">затрачено времени</dt>
+                  <dd class="example__item-value">60 дней</dd>
+                </div>
+              </dl>
+              <p class="example__summary">
+                <span class="example__summary-text">Затраты на питание:</span>
+                <span>15 000 руб.</span>
+              </p>
             </div>
-            <div class="example__item">
-              <dt class="example__item-indicator">затрачено времени</dt>
-              <dd class="example__item-value">60 дней</dd>
+          </div>
+          <div class="example__slider">
+            <div class="example__slider-wrapper">
+              <div class="example__slider--before">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/cat-before-tablet@1x.png 1x, img/cat-before-tablet@2x.png 2x">
+                  <img class="example__img example__img--before" width="280" height="256"
+                    src="img/cat-before-mobile@1x.png" srcset="img/cat-before-mobile@2x.png 2x" alt="Фото кота до.">
+                </picture>
+              </div>
+              <div class="example__slider--after">
+                <picture>
+                  <source media="(min-width: 768px)"
+                    srcset="img/cat-after-tablet@1x.png 1x, img/cat-after-tablet@2x.png 2x">
+                  <img class="example__img example__img--after" width="280" height="256"
+                    src="img/cat-after-mobile@1x.png" srcset="img/cat-after-mobile@2x.png 2x" alt="Фото кота после.">
+                </picture>
+              </div>
             </div>
-          </dl>
-          <p class="example__summary">
-            <span>Затраты на питание:</span>
-            <span>15 000 руб.</span>
-          </p>
-        </div>
-        <div class="example__slider">
-          <div class="example__slider--before">
-            <img class="example__img example__img--before" width="280" height="256" src="img/cat-before-mobile@1x.png"
-              alt="Фото кота до.">
+            <button class="example__button" type="button">
+              <span class="example__button-line"></span>
+              <svg class="example__thumb" aria-hidden="true" focusable="false" width="40" height="40">
+                <use xlink:href="img/sprite.svg#icon-slider"></use>
+              </svg>
+              <span class="visually-hidden">Передвинуть изображение до и после.</span>
+            </button>
           </div>
-          <div class="example__slider--after">
-            <img class="example__img example__img--after" width="280" height="256" src="img/cat-after-mobile@1x.png"
-              alt="Фото кота после.">
-          </div>
-          <button class="example__button" type="button">
-            <span class="visually-hidden">Передвинуть изображение до и после.</span>
-          </button>
         </div>
       </div>
     </section>
