@@ -1,0 +1,47 @@
+@use "../global/variable.scss" as var;
+
+.main-footer {
+  padding: 40px 0;
+  background-color: var.$basic-grey;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 55px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 66px 0;
+  }
+}
+
+.main-footer__wrapper {
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.main-footer__logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+
+  @media (min-width: var.$tablet-width) {
+    display: block;
+    margin: 0;
+    width: 142px;
+    height: 26px;
+  }
+}
+
+.main-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 0 0;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: 168px;
+    margin: 0;
+  }
+}
