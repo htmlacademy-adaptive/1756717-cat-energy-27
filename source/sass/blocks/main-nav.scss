@@ -1,5 +1,23 @@
 @use "../global/variable.scss" as var;
 
+.main-nav {
+  &--no-js {
+    .main-nav__toggle {
+      @media (max-width: var.$mobile-width-only) {
+        display: none;
+      }
+    }
+
+    .main-nav__list {
+      @media (max-width: var.$mobile-width-only) {
+        position: static;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
 .main-nav__wrapper {
   display: flex;
   justify-content: space-between;
@@ -64,6 +82,16 @@
 
   &--current {
     pointer-events: none;
+
+    @media (min-width: var.$tablet-width) {
+      border-bottom: 2px solid var.$green;
+    }
+  }
+
+  &--current-contrast {
+    @media (min-width: var.$desktop-width) {
+      border-bottom: 2px solid var.$white;
+    }
   }
 
   &--contrast {
@@ -73,7 +101,7 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    padding: 5px 0;
+    padding: 8px 0;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -121,14 +149,6 @@
 
   &:nth-child(4) {
     top: 16px;
-  }
-}
-
-.main-nav--nojs {
-  .main-nav__toggle {
-    @media (max-width: var.$mobile-width-only) {
-      display: none;
-    }
   }
 }
 

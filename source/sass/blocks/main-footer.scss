@@ -25,13 +25,32 @@
   display: flex;
   justify-content: center;
   margin: 0 auto 20px auto;
+  color: var.$deep-grey;
+
+  &:hover {
+    color: var.$dark-brown;
+  }
+
+  &:focus {
+    color: var.$dark-brown;
+    outline: none;
+  }
+
+  &:active {
+    color: var.$light-brown;
+  }
 
   @media (min-width: var.$tablet-width) {
     display: block;
     margin: 0;
-    width: 142px;
+    width: 170px;
     height: 26px;
   }
+}
+
+.main-footer__logo-img {
+  width: 142px;
+  height: 26px;
 }
 
 .main-footer__copyright {

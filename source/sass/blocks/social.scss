@@ -6,7 +6,7 @@
   gap: 10px 24px;
   justify-content: center;
   margin: 0;
-  padding: 20px 0;
+  padding: 19px 0;
   border-top: 1px solid var.$light-grey;
   border-bottom: 1px solid var.$light-grey;
   list-style: none;
@@ -23,6 +23,19 @@
   width: 28px;
   height: 22px;
   background-color: var.$middle-grey;
+
+  &:hover {
+    background-color: var.$green;
+  }
+
+  &:focus {
+    background-color: var.$green;
+  }
+
+  &:active {
+    background-color: var.$green;
+    opacity: 0.3;
+  }
 
   &--vk {
     mask-image: url("../img/sprite.svg#icon-vkontakte");
