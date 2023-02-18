@@ -1,7 +1,15 @@
 @use "../global/variable.scss" as var;
 
+.main-header {
+  &--accent {
+    @media (max-width: var.$mobile-width-only) {
+      border-bottom: 1px solid var.$light-grey;
+    }
+  }
+}
+
 .main-header__nav {
-  padding: 10px 0 15px 0;
+  padding: 10px 0 5px 0;
 
   @media (min-width: var.$tablet-width) {
     display: flex;
