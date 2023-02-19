@@ -1,6 +1,7 @@
 @use "global/global.scss";
 @use "global/fonts.scss";
 @use "blocks/page.scss";
+@use "blocks/container.scss";
 @use "blocks/page-body.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/main-header.scss";
@@ -18,5 +19,4 @@
 @use "blocks/catalog.scss";
 @use "blocks/product.scss";
 @use "blocks/catalog-additional.scss";
-@use "blocks/container.scss";
 @use "blocks/main-footer.scss";
