@@ -40,7 +40,7 @@ const resizeImagesByMouseMove = (evt) => {
 const resizeImagesByTouch = (evt) => {
   if (!isActive) {
     return;
-}
+  }
   let xCoordinate;
   for (let i = 0; i < evt.changedTouches.length; i++) {
     xCoordinate = evt.changedTouches[i].pageX;

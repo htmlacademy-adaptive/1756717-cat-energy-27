@@ -1,6 +1,10 @@
 @use "../global/variable.scss" as var;
 
 .intro {
+  @media (max-width: var.$mobile-width-only) {
+    position: relative;
+  }
+
   @media (min-width: var.$tablet-width) {
     padding: 57px 0 526px 89px;
   }
@@ -12,7 +16,7 @@
 
 .intro__wrapper {
   position: absolute;
-  top: 66px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;

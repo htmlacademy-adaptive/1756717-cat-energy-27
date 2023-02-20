@@ -10,14 +10,14 @@
     padding: 0 30px;
   }
 
-  &--selection {
+  &--no-indent {
     @media (min-width: var.$tablet-width) {
       padding: 0;
       margin: 0;
     }
   }
 
-  &--selection-left {
+  &--no-indent-left {
     @media (min-width: var.$desktop-width) {
       padding: 0 0 0 30px;
     }
