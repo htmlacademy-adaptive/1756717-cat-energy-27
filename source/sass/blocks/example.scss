@@ -1,5 +1,30 @@
 @use "../global/variable.scss" as var;
 
+.example {
+  padding: 25px 0 36px 0;
+  background-color: var.$neutral-grey;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 43px 0 100px 0;
+    background-image: linear-gradient(var.$white 60%, var.$neutral-grey 60%, var.$neutral-grey 100%);
+    border-top: 1px solid var.$light;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 0 73px 0;
+    background-image: linear-gradient(var.$white 23%, var.$neutral-grey 23%, var.$neutral-grey 100%);
+    border-top: none;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: var.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 560px;
+    column-gap: 224px;
+  }
+}
+
 .example__title {
   margin: 0 0 40px 0;
   font-size: 36px;
@@ -33,29 +58,89 @@
   }
 }
 
+.example__list-wrapper {
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 99px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+}
+
 .example__list {
-  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin: 0 auto 35px auto;
+
+  @media (max-width: var.$mobile-width-only) {
+    max-width: 280px;
+  }
+
+  @media (min-width: var.$tablet-width) {
+    gap: 45px;
+    margin: 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 60px 0;
+    padding: 0 5px 0 0;
+  }
+}
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 124px;
+  padding: 14px 5px 0 5px;
+  border: 1px solid var.$special-grey;
+  border-radius: 3px;
+
+  @media (min-width: var.$tablet-width) {
+    min-width: 162px;
+  }
 }
 
 .example__item-indicator {
+  max-width: 77px;
+  margin: auto 0 -15px 0;
   font-family: var.$secondary-font;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
+  background-color: var.$neutral-grey;
 
   @media (min-width: var.$tablet-width) {
+    min-width: 135px;
+    margin: auto 0 -5px 0;
     font-size: 14px;
     line-height: 14px;
+    background-color: var.$white;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    background-color: var.$neutral-grey;
   }
 }
 
 .example__item-value {
-  margin: 0;
+  margin: 0 0 8px 0;
   font-size: 24px;
   line-height: 24px;
   color: var.$black;
   text-transform: uppercase;
+  text-align: center;
+  order: -1;
 
   @media (min-width: var.$tablet-width) {
+    margin: 0 0 11px 0;
     font-size: 30px;
     line-height: 37px;
   }
@@ -66,9 +151,120 @@
   line-height: 20px;
   color: var.$black;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     margin: 0;
+    padding: 0 0 0 5px;
     font-size: 20px;
   }
+
+  @media (min-width: var.$desktop-width) {
+    flex-direction: row;
+    padding: 0;
+  }
+}
+
+.example__summary-text {
+  @media (min-width: var.$tablet-width) {
+    margin: 0 0 9px 0;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 63px 0 0;
+  }
+}
+
+.example__slider-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.example__slider {
+  position: relative;
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: var.$tablet-width) {
+    max-width: 560px;
+  }
+
+
+  &--before {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
+
+  &--after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+}
+
+.example__img {
+  @media (min-width: var.$tablet-width) {
+    width: 100%;
+    height: 512px;
+  }
+}
+
+.example__button {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  color: var.$middle-grey;
+  border: none;
+
+  &:hover {
+    .example__button-line {
+      background-color: var.$green;
+    }
+
+    .example__thumb {
+      color: var.$green;
+      stroke: var.$green;
+    }
+  }
+
+  &:active {
+    .example__button-line {
+      background-color: rgba(var.$dark-green, 0.6);
+    }
+
+    .example__thumb {
+      color: rgba(var.$dark-green, 0.6);
+      stroke: rgba(var.$dark-green, 0.6);
+    }
+  }
+}
+
+.example__button-line {
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: var.$middle-grey;
+  border-radius: 2px;
+}
+
+.example__thumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  color: var.$middle-grey;
+  stroke: var.$middle-grey;
+  transform: translate(-50%, -50%);
 }

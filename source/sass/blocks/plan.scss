@@ -6,23 +6,42 @@
   list-style: none;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 30px 0;
+    margin: 0 0 47px 0;
   }
 
   @media (min-width: var.$desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 80px;
+    margin: 0 0 75px 0;
   }
 }
 
 .plan__item {
   position: relative;
-  padding: 24px 20px 18px 20px;
+  padding: 30px 20px 22px 20px;
   background-color: var.$basic-grey;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    padding: 77px 62px 56px 54px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 77px 61px 55px 52px;
+  }
 
   &:not(:last-child) {
     margin: 0 0 20px 0;
+
+    @media (min-width: var.$tablet-width) {
+      margin: 0 0 30px 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      margin: 0;
+    }
   }
 
   &::after {
@@ -34,6 +53,22 @@
     height: 50px;
     background-color: var.$green;
     border-radius: 50%;
+
+    @media (min-width: var.$tablet-width) {
+      top: 92px;
+      right: 60px;
+      left: calc(100% - 200px - 60px);
+      width: 200px;
+      height: 200px;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      top: 47px;
+      right: calc(100% - 100px - 52px);
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &::before {
@@ -49,6 +84,22 @@
       width: 36px;
       height: 50px;
       background-image: url("../img/sprite.svg#icon-cat-slim");
+
+      @media (min-width: var.$tablet-width) {
+        top: 81px;
+        right: 90px;
+        left: calc(100% - 140px - 90px);
+        width: 140px;
+        height: 194px;
+      }
+
+      @media (min-width: var.$desktop-width) {
+        top: 41px;
+        right: calc(100% - 70px - 67px);
+        left: 67px;
+        width: 70px;
+        height: 97px;
+      }
     }
   }
 
@@ -59,72 +110,16 @@
       width: 67px;
       height: 28px;
       background-image: url("../img/sprite.svg#icon-cat-pro");
-    }
-  }
 
-  @media (min-width: var.$tablet-width) {
-    padding: 77px 62px 53px 52px;
-
-    &:not(:last-child) {
-      margin: 0 0 30px 0;
-    }
-
-    &::after {
-      top: 92px;
-      right: 62px;
-      left: calc(100% - 200px - 62px);
-      width: 200px;
-      height: 200px;
-    }
-
-    &--slim {
-      &::before {
-        top: 81px;
-        right: 92px;
-        left: calc(100% - 140px - 92px);
-        width: 140px;
-        height: 194px;
-      }
-    }
-
-    &--pro {
-      &::before {
+      @media (min-width: var.$tablet-width) {
         top: 135px;
-        right: 28px;
-        left: calc(100% - 268px - 28px);
+        right: 26px;
+        left: calc(100% - 268px - 26px);
         width: 268px;
         height: 112px;
       }
-    }
-  }
 
-  @media (min-width: var.$desktop-width) {
-    padding: 77px 61px 55px 52px;
-
-    &:not(:last-child) {
-      margin: 0;
-    }
-
-    &::after {
-      top: 47px;
-      right: calc(100% - 100px - 52px);
-      left: 52px;
-      width: 100px;
-      height: 100px;
-    }
-
-    &--slim {
-      &::before {
-        top: 41px;
-        right: calc(100% - 70px - 67px);
-        left: 67px;
-        width: 70px;
-        height: 97px;
-      }
-    }
-
-    &--pro {
-      &::before {
+      @media (min-width: var.$desktop-width) {
         top: 67px;
         right: calc(100% - 134px - 33px);
         left: 33px;
@@ -145,6 +140,7 @@
   color: var.$black;
 
   @media (min-width: var.$tablet-width) {
+    max-width: 250px;
     margin: 0 0 24px 0;
     padding: 0;
     font-size: 36px;
@@ -158,14 +154,14 @@
 }
 
 .plan__item-description {
-  margin: 0 0 15px 0;
+  margin: 0 0 18px 0;
   font-family: var.$secondary-font;
   padding: 0 0 23px 0;
   border-bottom: 1px solid var.$light-grey;
 
   @media (min-width: var.$tablet-width) {
     max-width: 340px;
-    margin: 0 0 48px 0;
+    margin: auto 0 29px 0;
     font-size: 16px;
     line-height: 24px;
     color: var.$black;
@@ -174,7 +170,7 @@
 
   @media (min-width: var.$desktop-width) {
     max-width: 460px;
-    margin: 0 0 23px 0;
+    margin: auto 0 5px 0;
   }
 }
 
@@ -196,7 +192,14 @@
     width: 24px;
     height: 12px;
     background-image: url("../img/sprite.svg#icon-arrow");
+    background-size: 24px 12px;
     transform: translateY(-50%);
+  }
+
+  &:hover {
+    &::before {
+      background-size: 32px 12px;
+    }
   }
 
   &:active {
@@ -204,7 +207,7 @@
   }
 
   @media (min-width: var.$tablet-width) {
-    max-width: 161px;
+    max-width: 170px;
     font-size: 20px;
     line-height: 30px;
   }

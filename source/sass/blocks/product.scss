@@ -1,6 +1,20 @@
 @use "../global/variable.scss" as var;
 
+.product {
+  padding: 19px 20px 25px 20px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0 37px 39px 39px;
+    background-color: var.$basic-grey;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    padding: 0 30px 40px 35px;
+  }
+}
+
 .product__title {
+  max-width: 80px;
   margin: 0 0 18px 0;
   font-size: 16px;
   line-height: 20px;
@@ -9,9 +23,11 @@
   color: var.$special-dark-grey;
 
   @media (min-width: var.$tablet-width) {
+    max-width: unset;
     margin: 0 0 21px 0;
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -19,20 +35,82 @@
   }
 }
 
+.product__break {
+  @media (max-width: var.$mobile-width-only) {
+    display: none;
+  }
+}
+
 .product__img {
   display: block;
+  margin: 0 0 13px 0;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 34px 0;
+    width: 161px;
+    height: 172px;
+    margin: -50px 0 34px 0;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 0 0 46px 0;
+    margin: -50px 0 46px 0;
+  }
+
+  &--large {
+    @media (min-width: var.$tablet-width) {
+      width: 168px;
+      height: 200px;
+      margin: -81px 0 34px 0;
+    }
+
+    @media (min-width: var.$desktop-width) {
+      margin: -81px 0 46px 0;
+    }
+  }
+}
+
+.product__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: end;
+  justify-items: center;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product__text-wrapper {
+  justify-self: stretch;
+  margin: 0 0 13px 0;
+
+  @media (min-width: var.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+    margin: 0 0 33px 0;
   }
 }
 
 .product__characteristics {
   margin: 0;
+
+  @media (min-width: var.$tablet-width) {
+    align-self: stretch;
+  }
+}
+
+.product__characteristics-item {
+  display: flex;
+  justify-content: space-between;
+  min-width: 140px;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 7px 0 9px 0;
+    border-bottom: 1px solid var.$special-grey;
+  }
 }
 
 .product__text {
@@ -50,5 +128,12 @@
 }
 
 .product__order-link {
+  grid-column: 1 / -1;
+  justify-self: stretch;
+  margin: auto 0 0 0;
   padding: 10px 26px;
+
+  @media (min-width: var.$tablet-width) {
+    align-self: stretch;
+  }
 }

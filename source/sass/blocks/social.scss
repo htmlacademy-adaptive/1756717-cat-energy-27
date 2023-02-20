@@ -1,5 +1,51 @@
+@use "../global/variable.scss" as var;
+
 .social {
+  display: grid;
+  grid-template-columns: repeat(3, 28px);
+  gap: 10px 24px;
+  justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 19px 0;
+  border-top: 1px solid var.$light-grey;
+  border-bottom: 1px solid var.$light-grey;
   list-style: none;
+
+  @media (min-width: var.$tablet-width) {
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+  background-color: var.$middle-grey;
+
+  &:hover {
+    background-color: var.$green;
+  }
+
+  &:focus {
+    background-color: var.$green;
+  }
+
+  &:active {
+    background-color: var.$green;
+    opacity: 0.3;
+  }
+
+  &--vk {
+    mask-image: url("../img/sprite.svg#icon-vkontakte");
+  }
+
+  &--youtube {
+    mask-image: url("../img/sprite.svg#icon-youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../img/sprite.svg#icon-telegram");
+  }
 }

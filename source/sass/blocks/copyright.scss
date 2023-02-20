@@ -2,6 +2,24 @@
 
 .copyright {
   color: var.$dark-grey;
+
+  &:hover {
+    .copyright__img {
+      color: var.$green;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    .copyright__img {
+      color: var.$green;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
