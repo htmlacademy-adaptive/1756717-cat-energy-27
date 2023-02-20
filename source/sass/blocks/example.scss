@@ -192,6 +192,7 @@
     max-width: 560px;
   }
 
+
   &--before {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
@@ -199,6 +200,11 @@
   }
 
   &--after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     grid-column: 1 / -1;
     grid-row: 1 / -1;
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
@@ -220,6 +226,28 @@
   height: 100%;
   color: var.$middle-grey;
   border: none;
+
+  &:hover {
+    .example__button-line {
+      background-color: var.$green;
+    }
+
+    .example__thumb {
+      color: var.$green;
+      stroke: var.$green;
+    }
+  }
+
+  &:active {
+    .example__button-line {
+      background-color: rgba(var.$dark-green, 0.6);
+    }
+
+    .example__thumb {
+      color: rgba(var.$dark-green, 0.6);
+      stroke: rgba(var.$dark-green, 0.6);
+    }
+  }
 }
 
 .example__button-line {
@@ -237,5 +265,7 @@
   width: 40px;
   height: 40px;
   color: var.$middle-grey;
+  stroke: var.$middle-grey;
   transform: translate(-50%, -50%);
 }
+
