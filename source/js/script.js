@@ -24,26 +24,26 @@ let isActive = false;
 
 const getShift = (xCoordinate) => {
   const shift = Math.max(0, Math.min(xCoordinate, slider.offsetWidth));
-	range.style.left = `${shift}px`;
+  range.style.left = `${shift}px`;
   before.style.clipPath = `polygon(0 0, ${shift}px 0, ${shift}px 100%, 0% 100%)`;
   after.style.clipPath = `polygon(${shift}px 0, 100% 0, 100% 100%, ${shift}px 100%)`;
 }
 
 const resizeImagesByMouseMove = (evt) => {
   if (!isActive) {
-		return;
-	}
-	let xCoordinate = evt.pageX - slider.getBoundingClientRect().left;
+    return;
+  }
+  let xCoordinate = evt.pageX - slider.getBoundingClientRect().left;
   getShift(xCoordinate);
 };
 
 const resizeImagesByTouch = (evt) => {
   if (!isActive) {
-		return;
-	}
+    return;
+}
   let xCoordinate;
   for (let i = 0; i < evt.changedTouches.length; i++) {
-  	xCoordinate = evt.changedTouches[i].pageX;
+    xCoordinate = evt.changedTouches[i].pageX;
   }
 
   xCoordinate -= slider.getBoundingClientRect().left;
