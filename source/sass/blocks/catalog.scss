@@ -103,6 +103,10 @@
     line-height: 18px;
     text-align: center;
   }
+
+  @media (min-width: var.$desktop-width) {
+    max-width: unset;
+  }
 }
 
 .catalog__link {
