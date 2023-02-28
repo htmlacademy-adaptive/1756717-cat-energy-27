@@ -60,10 +60,13 @@
           <p class="intro__subtitle">Занялся собой? Займись котом!</p>
         </div>
         <picture>
+          <source type="image/webp" media="(min-width: 1280px)" srcset="img/intro-desktop@1x.webp 1x, img/intro-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/intro-tablet@1x.webp 1x, img/intro-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/intro-mobile@1x.webp 1x, img/intro-mobile@2x.webp 2x">
           <source media="(min-width: 1280px)" srcset="img/intro-desktop@1x.png 1x, img/intro-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/intro-tablet@1x.png 1x, img/intro-tablet@2x.png 2x">
           <img class="intro__img" width="280" height="270" src="img/intro-mobile@1x.png"
-            srcset="img/intro-mobile@1x.png 2x" alt="Питание Cat Energy с курицей.">
+            srcset="img/intro-mobile@2x.png 2x" alt="Питание Cat Energy с курицей.">
         </picture>
         <a class="intro__button button button--primary" href="form.html">Подобрать программу</a>
       </div>
@@ -158,6 +161,8 @@
             <div class="example__slider-wrapper">
               <div class="example__slider--before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-before-tablet@1x.webp 1x, img/cat-before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-before-mobile@1x.webp 1x, img/cat-before-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/cat-before-tablet@1x.png 1x, img/cat-before-tablet@2x.png 2x">
                   <img class="example__img example__img--before" width="280" height="256"
@@ -166,6 +171,8 @@
               </div>
               <div class="example__slider--after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-after-tablet@1x.webp 1x, img/cat-after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/cat-after-mobile@1x.webp 1x, img/cat-after-mobile@2x.webp 2x">
                   <source media="(min-width: 768px)"
                     srcset="img/cat-after-tablet@1x.png 1x, img/cat-after-tablet@2x.png 2x">
                   <img class="example__img example__img--after" width="280" height="256"
@@ -201,8 +208,11 @@
           width="320" height="362" allowfullscreen loading="lazy" title="Cat Energy на карте"></iframe>
         <noscript>
           <picture>
-            <source media="(min-width: 1280px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@1x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@1x.png 2x">
+            <source type="image/webp" media="(min-width: 1280px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@1x.webp 2x">
+            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1280px)" srcset="img/map-desktop@1x.png 1x, img/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.png 1x, img/map-tablet@2x.png 2x">
             <img class="contacts__map-noscript" width="320" height="362" src="img/map-mobile@1x.png"
               srcset="img/map-mobile@2x.png 2x" alt="Cat Energy на карте.">
           </picture>
