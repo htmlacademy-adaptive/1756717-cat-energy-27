@@ -138,6 +138,10 @@
   @media (min-width: var.$tablet-width) {
     display: none;
   }
+
+  &:disabled {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__toggle-line {

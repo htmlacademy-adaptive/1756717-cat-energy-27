@@ -248,6 +248,18 @@
       stroke: rgba(var.$dark-green, 0.6);
     }
   }
+
+  &:disabled {
+    pointer-events: none;
+
+    .example__button-line {
+      opacity: 0.3;
+    }
+
+    .example__thumb {
+      opacity: 0.3;
+    }
+  }
 }
 
 .example__button-line {

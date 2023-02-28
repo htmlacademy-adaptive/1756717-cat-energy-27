@@ -345,6 +345,7 @@
 
 .selection-form__control-input:focus + .selection-form__control-mark {
   border: 1px solid var.$grey;
+  outline: 1px solid var.$black;
 }
 
 .selection-form__control-input--radio + .selection-form__control-mark {
