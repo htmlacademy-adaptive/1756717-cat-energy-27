@@ -148,6 +148,7 @@
   }
 
   @media (min-width: var.$desktop-width) {
+    max-width: unset;
     margin: 0 0 73px 0;
     padding: 0 0 0 162px;
   }
