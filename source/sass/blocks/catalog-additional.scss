@@ -12,10 +12,14 @@
   background-color: var.$white;
 
   @media (min-width: var.$tablet-width) {
-    margin: 0 0 80px -10px;
+    margin: 0 0 80px 0;
     padding: 0 40px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: var.$desktop-width) {
+    margin: 0 0 80px -40px;
   }
 
   &::after {
@@ -47,6 +51,13 @@
   }
 }
 
+.catalog-additional__container {
+  @media (max-width: var.$mobile-width-only) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .catalog-additional__list {
   margin: 0;
   padding: 0;
@@ -55,11 +66,11 @@
 }
 
 .catalog-additional__item {
-  padding: 12px 0 20px 0;
+  padding: 12px 0 18px 0;
   border-bottom: 1px solid var.$special-grey;
 
   @media (min-width: var.$tablet-width) {
-    padding: 26px 0 28px 0;
+    padding: 26px 0 26px 0;
   }
 
   @media (min-width: var.$desktop-width) {
@@ -67,11 +78,16 @@
     grid-template-columns: 1fr 244px;
     column-gap: 40px;
     align-items: center;
-    padding: 15px 0 17px 0;
+    padding: 15px 0 16px 0;
   }
 }
 
 .catalog-additional__wrapper {
+  @media (max-width: var.$mobile-width-only) {
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
   @media (min-width: var.$desktop-width) {
     display: grid;
     grid-template-columns: 1fr 245px;
@@ -104,13 +120,15 @@
   @media (min-width: var.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 55px;
-    column-gap: 49px;
+    column-gap: 39px;
     justify-items: end;
     margin: 0;
   }
 
   @media (min-width: var.$desktop-width) {
     justify-items: start;
+    grid-template-columns: 1fr 43px;
+    margin: 5px 0 0 0;
   }
 }
 
@@ -142,6 +160,7 @@
 
 .catalog-additional__promo-text {
   max-width: 165px;
+  margin: 0;
   font-family: var.$secondary-font;
   font-size: 16px;
   line-height: 20px;
@@ -180,7 +199,7 @@
 
   @media (min-width: var.$tablet-width) {
     margin: 69px 0 76px 0;
-    padding: 57px 77px 60px 77px;
+    padding: 63px 77px 60px 77px;
     flex-direction: row;
   }
 
@@ -236,11 +255,13 @@
 }
 
 .catalog-additional__img {
+  margin: 0 0 50px 0;
+
   @media (min-width: var.$tablet-width) {
-    margin: 0 265px 0 0;
+    margin: 0 270px 0 0;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: 0;
+    margin: 0 0 50px 0;
   }
 }

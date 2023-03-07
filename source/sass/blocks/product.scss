@@ -9,13 +9,13 @@
   }
 
   @media (min-width: var.$desktop-width) {
-    padding: 0 30px 40px 35px;
+    padding: 0 37px 40px 40px;
   }
 }
 
 .product__title {
   max-width: 80px;
-  margin: 0 0 18px 0;
+  margin: 0 0 15px 0;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -24,13 +24,14 @@
 
   @media (min-width: var.$tablet-width) {
     max-width: unset;
-    margin: 0 0 21px 0;
+    margin: 0 0 13px 0;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
   }
 
   @media (min-width: var.$desktop-width) {
+    margin: 0 0 15px 0;
     line-height: 21px;
   }
 }
@@ -43,27 +44,38 @@
 
 .product__img {
   display: block;
-  margin: 0 0 13px 0;
+
+  &:nth-child(even) {
+    @media (max-width: var.$mobile-width-only) {
+      margin: 0 0 21px 0;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (max-width: var.$mobile-width-only) {
+      margin: 0 0 13px 0;
+    }
+  }
 
   @media (min-width: var.$tablet-width) {
     width: 161px;
     height: 172px;
-    margin: -50px 0 34px 0;
+    margin: -46px 0 36px 0;
   }
 
   @media (min-width: var.$desktop-width) {
-    margin: -50px 0 46px 0;
+    margin: -54px 0 46px 0;
   }
 
   &--large {
     @media (min-width: var.$tablet-width) {
       width: 168px;
       height: 200px;
-      margin: -81px 0 34px 0;
+      margin: -70px 0 32px 0;
     }
 
     @media (min-width: var.$desktop-width) {
-      margin: -81px 0 46px 0;
+      margin: -83px 0 46px 0;
     }
   }
 }
@@ -83,14 +95,14 @@
 
 .product__text-wrapper {
   justify-self: stretch;
-  margin: 0 0 13px 0;
+  margin: 0 0 21px 0;
 
   @media (min-width: var.$tablet-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    margin: 0 0 33px 0;
+    margin: 0 0 32px 0;
   }
 }
 
@@ -108,7 +120,7 @@
   min-width: 140px;
 
   @media (min-width: var.$tablet-width) {
-    padding: 7px 0 9px 0;
+    padding: 7px 0 8px 0;
     border-bottom: 1px solid var.$special-grey;
   }
 }
@@ -135,5 +147,6 @@
 
   @media (min-width: var.$tablet-width) {
     align-self: stretch;
+    justify-self: end;
   }
 }

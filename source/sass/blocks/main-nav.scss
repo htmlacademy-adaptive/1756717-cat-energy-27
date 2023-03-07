@@ -2,6 +2,16 @@
 
 .main-nav {
   &--no-js {
+    @media (max-width: var.$mobile-width-only) {
+      margin: 0 -20px;
+    }
+
+    .main-nav__wrapper {
+      @media (max-width: var.$mobile-width-only) {
+        padding: 0 20px 12px 20px;
+      }
+    }
+
     .main-nav__toggle {
       @media (max-width: var.$mobile-width-only) {
         display: none;
@@ -24,7 +34,7 @@
   align-items: center;
 
   @media (max-width: var.$mobile-width-only) {
-    padding: 0 0 8px 0;
+    padding: 0 0 11px 0;
   }
 }
 
@@ -127,6 +137,10 @@
 
   @media (min-width: var.$tablet-width) {
     display: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

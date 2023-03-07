@@ -5,7 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кэт энерджи - форма</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/lato/lato-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswald-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page-body">
@@ -52,7 +59,7 @@
       <form class="selection-form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="selection-form__cat-info">
           <fieldset class="selection-form__group">
-            <div class="container container--selection-left">
+            <div class="container container--no-indent-left">
               <h2 class="visually-hidden">Сведения о коте</h2>
               <div class="selection-form__item">
                 <label class="selection-form__label" for="cat-name">Имя:*</label>
@@ -72,7 +79,7 @@
             </div>
           </fieldset>
           <fieldset class="selection-form__group selection-form__group--decor">
-            <div class="container container--selection">
+            <div class="container container--no-indent">
               <h2 class="visually-hidden">Цель покупки</h2>
               <ul class="selection-form__list selection-form__list--radio">
                 <li class="selection-form__item">
