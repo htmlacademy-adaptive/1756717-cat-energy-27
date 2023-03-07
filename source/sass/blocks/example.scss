@@ -191,24 +191,23 @@
   @media (min-width: var.$tablet-width) {
     max-width: 560px;
   }
+}
 
+.example__slider-before {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
 
-  &--before {
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-  }
-
-  &--after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-  }
+.example__slider-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 }
 
 .example__img {
